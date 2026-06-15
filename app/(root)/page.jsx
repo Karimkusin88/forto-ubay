@@ -11,9 +11,9 @@ import { FullPageWrapper, Section, useFullPage } from "@alvalens/react-fullpage-
 
 // components
 import Button from "@/components/Button";
-import Me from "@/public/image/alvalen-front.webp";
-import MeAbout from "@/public/image/me2.jpg";
-import Setup from "@/public/image/setup.jpg";
+import Me from "@/public/image/ubay1.jpg";
+import MeAbout from "@/public/image/ubay6.png";
+import Setup from "@/public/image/ubay4.png";
 import ProjectAll from "@/public/image/projects.png";
 import Hr from "@/components/Hr";
 // icons
@@ -94,7 +94,7 @@ const MyPage = () => {
 								delay: 0.2,
 								type: "spring",
 							}}>
-							Ubay
+							Ubay Rahmat Hidayat
 						</motion.h3>
 						<motion.h1
 							className="text-black text-4xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold my-2 md:my-5"
@@ -114,7 +114,7 @@ const MyPage = () => {
 								delay: 0.4,
 								type: "spring",
 							}}>
-							Halo! Saya Ubay, memadukan keahlian sebagai Software Engineer dan Praktisi Konstruksi di IYS Works. Saya merancang solusi digital yang powerful, serta membangun struktur dunia nyata yang kokoh dan elegan.
+							Halo! Saya Ubay Rahmat Hidayat, memadukan keahlian sebagai Multidisciplinary Builder dan Praktisi Konstruksi di IYS Works. Saya merancang solusi digital yang powerful, serta membangun struktur dunia nyata yang kokoh dan elegan.
 						</motion.p>
 						<motion.div
 							className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
@@ -362,14 +362,14 @@ const MyPage = () => {
 								delay: 0.3,
 								type: "spring",
 							}}>
-							<a href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay,">
+							<a href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay Rahmat Hidayat,">
 								kontak@iys.works
 							</a>
 						</motion.p>
 						{/* icons */}
 						<div className="flex justify-center items-center space-x-4">
 							<motion.a
-								href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay,"
+								href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay Rahmat Hidayat,"
 								aria-label="Send email"
 								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 								initial={{ y: 40, opacity: 0 }}

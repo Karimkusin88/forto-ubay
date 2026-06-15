@@ -3,7 +3,6 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.alvalens.my.id
+Host: https://github.com/Karimkusin88
 
-# Sitemaps
-Sitemap: https://www.alvalens.my.id/sitemap.xml
+Sitemap: https://github.com/Karimkusin88/sitemap.xml

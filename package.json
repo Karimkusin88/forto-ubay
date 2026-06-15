@@ -1,12 +1,12 @@
 {
   "name": "alvalen-portfolio-website",
   "author": {
-    "name": "Alvalen Shafelbilyunazra",
-    "email": "alvalen.shafel04@gmail.com",
-    "url": "https://alvalens.my.id"
+    "name": "Ubay Rahmat Hidayat",
+    "email": "kontak@iys.works",
+    "url": "https://github.com/Karimkusin88"
   },
   "license": "GPL-3.0",
-  "copyright": "Copyright (C) 2025 Alvalen Shafelbilyunazra",
+  "copyright": "Copyright (C) 2026 Ubay Rahmat Hidayat",
   "version": "1.0.0",
   "private": true,
   "scripts": {

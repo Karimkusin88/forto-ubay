@@ -113,7 +113,7 @@ const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 									variants={itemVariants}
 									animate={isNavOpen ? "open" : "closed"}
 									custom={0.4}>
-									Contact
+									Hubungi Saya
 								</motion.h2>
 							</div>
 						</Link>

@@ -10,9 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Me4 from "@/public/image/me4.jpeg";
-import Me5 from "@/public/image/me5.jpg";
-import Me6 from "@/public/image/me6.jpg";
+import Me4 from "@/public/image/ubay5.jpeg";
+import Me5 from "@/public/image/ubay4.png";
+import Me6 from "@/public/image/ubay2.jpg";
 
 function Wrapper({ children }) {
 	return (
@@ -43,88 +43,50 @@ export default function Education() {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const achievementsByYear = {
-		2025: [
-			{
-				icon: faMedal,
-				title: "1st place (Gold Medal)",
-				subtitle: "Fesmaro IT Business Competition",
-				date: "Mar 2025",
-				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faAward,
-				title: "Finalist",
-				subtitle: "Hackfest Build to Billion 2025",
-				date: "Apr 2025",
-				color: "from-blue-500 to-purple-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Faculty of Engineering Most Outstanding Student",
-				date: "Feb 2025",
-				color: "from-amber-600 to-yellow-600",
-			},
-		],
 		2024: [
 			{
-				icon: faTrophy,
-				title: "Special Award | Gold Medal | Incubation Opportunity",
-				subtitle: "Indonesia Inventor Day 2024 (IID)",
-				date: "Aug 2024",
+				icon: faMedal,
+				title: "IYS Works Digital Transformation",
+				subtitle: "Membangun website resmi IYS Works dan Kampung Ciburial",
+				date: "2024",
 				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faMedal,
-				title: "1st place (Gold Medal)",
-				subtitle: "Tech & Trade Expo 2024",
-				date: "Jul 2024",
-				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faMedal,
-				title: "2nd place (Silver Medal)",
-				subtitle: "IdeaFest 2024",
-				date: "Jul 2024",
-				color: "from-slate-400 to-slate-500",
-			},
-			{
-				icon: faAward,
-				title: "Finalist",
-				subtitle: "37th National Student Science Week (PIMNAS)",
-				date: "Oct 2024",
-				color: "from-blue-500 to-purple-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Student Digital Innovation Competition (LIDM)",
-				date: "Jun 2024",
-				color: "from-amber-600 to-yellow-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Fesmaro UI/UX Design",
-				date: "Jun 2024",
-				color: "from-amber-600 to-yellow-600",
-			},
+			}
 		],
-		2023: [
+		2022: [
 			{
 				icon: faAward,
-				title: "Finalist",
-				subtitle: "36th National Student Science Week (PIMNAS)",
-				date: "Nov 2023",
+				title: "Web3 Apps Deployment",
+				subtitle: "Mulai membuat dan mendeploy 5+ aplikasi Web3 secara otodidak",
+				date: "2022",
 				color: "from-blue-500 to-purple-600",
-			},
+			}
+		],
+		2021: [
 			{
 				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "FORKAFEST 3.0 Web Development competition",
-				date: "Jan 2023",
-				color: "from-amber-600 to-yellow-600",
-			},
+				title: "IYS Works Founded",
+				subtitle: "Mendirikan bisnis kontraktor mandiri IYS Works",
+				date: "2021",
+				color: "from-yellow-400 to-orange-500",
+			}
+		],
+		2019: [
+			{
+				icon: faTrophy,
+				title: "Mega-Proyek BUMN",
+				subtitle: "Dipercaya menggarap instalasi di proyek PT Adhi Karya & Waskita",
+				date: "2019",
+				color: "from-slate-400 to-slate-500",
+			}
+		],
+		2017: [
+			{
+				icon: faAward,
+				title: "PLTU Lombok Project",
+				subtitle: "Terlibat dalam instalasi kelistrikan di infrastruktur nasional",
+				date: "2017",
+				color: "from-blue-500 to-purple-600",
+			}
 		],
 	};
 
@@ -166,14 +128,14 @@ export default function Education() {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}>
 						<div className="font-medium text-lg mb-4">
-							2022 - 2025
+							2012 - 2015
 						</div>
 						<div>
 							<h2 className="font-semibold text-xl">
-								Universitas Negeri Malang
+								MA Bani Abi Bakar Bungbulang
 							</h2>
 							<h3 className="text-md font-normal mb-3">
-								S1 Teknik Informatika | Computer Science
+								Pendidikan Formal Menengah Atas (Madrasah Aliyah)
 							</h3>
 							<div className="gap-4 mb-4 flex items-stretch md:h-[300px] xl:h-[400px]">
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
@@ -181,7 +143,7 @@ export default function Education() {
 										src={Me5}
 										width={400}
 										height={225}
-										alt="University"
+										alt="Experience"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
@@ -190,7 +152,7 @@ export default function Education() {
 										src={Me4}
 										width={400}
 										height={225}
-										alt="University"
+										alt="Experience"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
@@ -199,64 +161,37 @@ export default function Education() {
 										src={Me6}
 										width={400}
 										height={225}
-										alt="University"
+										alt="Experience"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
 								<p className="text-gray-600 text-justify title text-lg">
-									I graduated as one of the{" "}
+									Setelah lulus dari{" "}
 									<span className="text-black font-medium">
-										Most Outstanding Students
+										MA Bani Abi Bakar Bungbulang
 									</span>{" "}
-									from{" "}
+									pada tahun 2015, saya tidak menempuh pendidikan perguruan tinggi. Sebaliknya, saya memilih untuk terjun langsung ke dunia kerja dan belajar dari kehidupan nyata (Street Smart).
+									<br />
+									<br />
+									Saya percaya bahwa {" "}
 									<span className="text-black font-medium">
-										Universitas Negeri Malang
+										pendidikan terbaik didapatkan di lapangan
 									</span>
-									, completing my Bachelor in{" "}
+									. Selama sepuluh tahun terakhir, saya menempa diri melalui berbagai mega proyek infrastruktur, berhadapan langsung dengan masalah instalasi kelistrikan yang rumit, dan belajar mengelola bisnis.
+									<br />
+									<br />
+									Keberanian untuk belajar mandiri (otodidak) ini juga yang memotivasi saya untuk terjun ke ranah{" "}
 									<span className="text-black font-medium">
-										Computer Science
+										Teknologi & Web3
 									</span>{" "}
-									with a perfect GPA. My academic journey
-									was defined by a balance of rigorous
-									technical research and high-stakes
-									execution.
-									<br />
-									<br />
-									As the{" "}
-									<span className="text-black font-medium">
-										Co-Lead of Google Developer Group on
-										Campus (GDGoC)
-									</span>
-									, I spearheaded technical initiatives and
-									mentored a community of developers. Beyond
-									the classroom, I secured multiple national
-									and international honors, including being a{" "}
-									<span className="text-black font-medium">
-										two-time PIMNAS Finalist and an
-										Indonesia Inventor Day Gold Medalist
-									</span>
-									.
-									<br />
-									<br />
-									My education served as the engineering
-									foundation for my current work in{" "}
-									<span className="text-black font-medium">
-										Enterprise Architecture
-									</span>{" "}
-									and{" "}
-									<span className="text-black font-medium">
-										AI Implementation
-									</span>
-									. I remain committed to bridging academic
-									innovation with production-ready, scalable
-									software solutions.
+									dan berhasil membangun ekosistem aplikasi tanpa pendidikan formal IT.
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
 								<div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-									GPA: 4 out of 4
+									Street Smart & Self-Taught
 								</div>
 							</div>
 						</div>

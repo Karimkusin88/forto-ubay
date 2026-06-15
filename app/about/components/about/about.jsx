@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Card from "./spotify/card";
 import { motion } from "framer-motion";
-import Me1 from "@/public/image/me1.jpg";
-import Me2 from "@/public/image/me2.jpg";
-import Me3 from "@/public/image/me3.jpg";
+import Me1 from "@/public/image/ubay1.jpg";
+import Me2 from "@/public/image/ubay3.jpg";
+import Me3 from "@/public/image/ubay2.jpg";
 import Hr from "@/components/Hr";
 
 function Title() {
@@ -111,49 +111,34 @@ export default function About() {
 						type: "spring",
 					}}>
 					<h2 className="text-2xl font-bold tracking-wider mb-3">
-						Ubay
+						Ubay Rahmat Hidayat
 					</h2>
 					<p className="text-gray-600 text-justify title text-lg leading-relaxed">
-						I am a{" "}
+						Saya adalah seorang{" "}
 						<span className="text-black font-medium">
-							Product-Minded Software Engineer{" "}
-						</span>
-						specialized in bridging the gap between{" "}
-						<span className="text-black font-medium">
-							Modern Web Ecosystems and Enterprise Architectures
-						</span>
-						. A Computer Science graduate from{" "}
-						<span className="text-black font-medium">
-							Universitas Negeri Malang
-						</span>
-						, my professional journey is defined by high-stakes
-						projects, ranging from robust government-scale
-						microservices to sophisticated{" "}
-						<span className="text-black font-medium">
-							RAG-powered SaaS products{" "}
-						</span>
-						designed to bring the power of Generative AI to
-						end-users.
+							Multidisciplinary Builder
+						</span>{" "}
+						yang menggabungkan keahlian fisik (hard-skills lapangan) dengan teknologi digital secara otodidak. Memulai karir di dunia konstruksi tepat setelah lulus Madrasah Aliyah pada 2015, saya tidak segan terjun langsung menangani proyek kelistrikan, *drywall*, dan pemeliharaan interior.
 						<br />
 						<br />
-						Currently, I engineer large-scale enterprise systems at{" "}
+						Jam terbang yang panjang membawa saya dipercaya terlibat dalam mega-proyek berskala nasional di bawah naungan BUMN seperti{" "}
 						<span className="text-black font-medium">
-							MGG Software
-						</span>
-						, ensuring strict data compliance and high availability
-						for international clients. Simultaneously, I lead the
-						technical vision as the{" "}
+							PT Adhi Karya
+						</span>{" "}
+						dan{" "}
 						<span className="text-black font-medium">
-							CTO of Intervyou
+							PT Waskita Karya
 						</span>
-						, an AI-driven platform supported by the{" "}
+						, serta PLTU Lombok. Kini, saya menuangkan pengalaman kepemimpinan lapangan tersebut dengan mendirikan bisnis kontraktor mandiri,{" "}
 						<span className="text-black font-medium">
-							Google for Startups Cloud Program and NVIDIA
-							Inception
+							IYS Works
+						</span>.
+						<br />
+						<br />
+						Meski berakar di dunia konstruksi fisik, rasa ingin tahu yang tinggi mendorong saya belajar memprogram. Berbekal mental pekerja keras, saya berhasil merancang dan mendeploy berbagai Decentralized Apps (DApps), Staking Dashboards, hingga antarmuka DEX berbasis Web3. Bagi saya, baik menginstalasi kelistrikan rumit maupun menulis kode *React*, intinya tetap sama:{" "}
+						<span className="text-black font-medium">
+							membangun pondasi yang kokoh dan memberikan solusi yang nyata.
 						</span>
-						. I remain dedicated to delivering measurable business
-						value at the intersection of web technologies and
-						artificial intelligence.
 					</p>
 					<Card />
 				</motion.div>

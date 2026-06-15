@@ -24,34 +24,29 @@ const jost = Jost({
 });
 
 export const metadata = {
-	metadataBase: new URL("https://www.alvalens.my.id"),
-	title: "Ubays | Portofolio",
+	metadataBase: new URL("https://github.com/Karimkusin88"),
+	title: "Ubay Rahmat Hidayat | Portofolio",
 
 	description:
-		"Ubay, Product-Minded Software Engineer specializing in Next.js, Spring Boot, and AI Solutions. Founder & CTO of Intervyou.",
+		"Ubay Rahmat Hidayat, Multidisciplinary Builder memadukan keahlian Konstruksi Fisik dan Teknologi Web3. Founder & Lead Contractor IYS Works.",
 
-	author: "Ubay",
-	siteUrl: "https://www.alvalens.my.id",
-	applicationName: "Ubays",
+	author: "Ubay Rahmat Hidayat",
+	siteUrl: "https://github.com/Karimkusin88",
+	applicationName: "Ubay Rahmat Hidayat",
 
 	keywords: [
-		"alvalens",
-		"alvalen",
-		"alvalen shafel",
-		"shafel",
-		"alvalen shafelbilyunazra",
-		"alvalen shafel bilyunazra",
-		"bloodfallen",
-		"alvalen porto",
-		"alvalen um",
+		"ubay",
+		"ubays",
+		"karimkusin88",
+		"porto-ubay",
 	],
 
 	openGraph: {
 		type: "website",
-		url: "https://www.alvalens.my.id",
-		title: "Ubays | Portofolio",
-		siteName: "Ubays | Portofolio",
-		description: "My name is Ubays, This is my portofolio website.",
+		url: "https://github.com/Karimkusin88",
+		title: "Ubay Rahmat Hidayat | Portofolio",
+		siteName: "Ubay Rahmat Hidayat | Portofolio",
+		description: "My name is Ubay Rahmat Hidayat, This is my portofolio website.",
 		images: [
 			{
 				url: "/og-image-rev.png",
@@ -66,21 +61,18 @@ export const metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Person",
-	name: "Ubay",
-	url: "https://www.alvalens.my.id",
-	jobTitle: "Full Stack Software Engineer",
+	name: "Ubay Rahmat Hidayat",
+	url: "https://github.com/Karimkusin88",
+	jobTitle: "Multidisciplinary Builder",
 	worksFor: [
-		{ "@type": "Organization", name: "MGG Software" },
-		{ "@type": "Organization", name: "Intervyou" },
+		{ "@type": "Organization", name: "IYS Works" }
 	],
 	alumniOf: {
-		"@type": "CollegeOrUniversity",
-		name: "Universitas Negeri Malang",
+		"@type": "HighSchool",
+		name: "MA Bani Abi Bakar Bungbulang",
 	},
 	sameAs: [
-		"https://github.com/Ubays",
-		"https://www.linkedin.com/in/alvalen-shafel-8a081a254/",
-		"https://www.instagram.com/alvalens_/",
+		"https://github.com/Karimkusin88"
 	],
 };
 

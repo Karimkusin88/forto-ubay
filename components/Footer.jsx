@@ -23,7 +23,7 @@ export default function Footer() {
 						transition={{
 							delay: 0.2,
 						}}>
-						Want something like this?
+						Mau sesuatu seperti ini?
 					</motion.h2>
 					<motion.h1
 						className="text-5xl md:text-7xl font-medium mt-3  hover:underline whitespace-nowrap leading-none"
@@ -38,7 +38,7 @@ export default function Footer() {
 						transition={{
 							delay: 0.5,
 						}}>
-						Get In Touch{" "}
+						Hubungi Saya{" "}
 						<FontAwesomeIcon
 							icon={faArrowAltCircleRight}
 							className="text-5xl ml-2 "

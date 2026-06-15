@@ -30,9 +30,7 @@ export default function ProjectCard({ project, index, activeCategory }) {
 							className="bg-slate-950 opacity-10  group-hover/tes:opacity-100 transition-all ease duration-500 object-cover"
 							blurDataURL={BlurImage.src}
 						/>
-						<div className="absolute top-0 left-0 bg-gray-600 px-4 py-2">
-							<h4 className="text-white">{project.year}</h4>
-						</div>
+
 						<div className="transition-all ease duration-500 opacity-100 content text-center group-hover/tes:opacity-0 z-10">
 							<h1 className="text-3xl font-bold mb-3">{project.title}</h1>
 							<p>

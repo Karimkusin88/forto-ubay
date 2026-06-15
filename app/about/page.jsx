@@ -13,7 +13,7 @@ import Experience from "./components/experience.jsx";
 import Education from "./components/education.jsx";
 
 // images
-import Hero from "@/public/image/me2.jpg";
+import Hero from "@/public/image/ubay3.jpg";
 
 import Hr from "@/components/Hr";
 import About from "./components/about/about.jsx";
@@ -56,9 +56,9 @@ export default function Page() {
 						</h1>
 						<Hr />
 						<p className="title text-xl mt-4 tracking-wider text-gray-900 leading-[1.7rem] mb-5 ">
-							A brief introduction my journey as a{" "}
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-								software engineer.
+							Cerita singkat perjalanan karir saya sebagai seorang{" "}
+							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent font-bold">
+								Multidisciplinary Builder.
 							</span>
 						</p>
 						<motion.div

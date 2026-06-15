@@ -1,4 +1,4 @@
-# Alvalens Portfolio
+# Ubay Portfolio
 
 ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=aleph-discord-bot.visitor-badge)
 
@@ -38,8 +38,8 @@ Personal portfolio website built with Next.js 15, featuring fullpage scrolling, 
 ### Installation
 
 ```bash
-git clone https://github.com/Alvalens/Alvalens-porto-2-nextJs.git
-cd Alvalens-porto-2-nextJs
+git clone https://github.com/Karimkusin88/forto-ubay.git
+cd forto-ubay
 pnpm install
 ```
 
