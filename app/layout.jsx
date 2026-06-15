@@ -25,14 +25,14 @@ const jost = Jost({
 
 export const metadata = {
 	metadataBase: new URL("https://www.alvalens.my.id"),
-	title: "Alvalens | Portofolio",
+	title: "Ubays | Portofolio",
 
 	description:
-		"Alvalen, Product-Minded Software Engineer specializing in Next.js, Spring Boot, and AI Solutions. Founder & CTO of Intervyou.",
+		"Ubay, Product-Minded Software Engineer specializing in Next.js, Spring Boot, and AI Solutions. Founder & CTO of Intervyou.",
 
-	author: "Alvalen Shafelbilyunazra",
+	author: "Ubay",
 	siteUrl: "https://www.alvalens.my.id",
-	applicationName: "Alvalens",
+	applicationName: "Ubays",
 
 	keywords: [
 		"alvalens",
@@ -49,13 +49,13 @@ export const metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://www.alvalens.my.id",
-		title: "Alvalens | Portofolio",
-		siteName: "Alvalens | Portofolio",
-		description: "My name is Alvalens, This is my portofolio website.",
+		title: "Ubays | Portofolio",
+		siteName: "Ubays | Portofolio",
+		description: "My name is Ubays, This is my portofolio website.",
 		images: [
 			{
 				url: "/og-image-rev.png",
-				alt: "Alvalens Portofolio",
+				alt: "Ubays Portofolio",
 				width: 1200,
 				height: 630,
 			},
@@ -66,7 +66,7 @@ export const metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Person",
-	name: "Alvalen Shafelbilyunazra",
+	name: "Ubay",
 	url: "https://www.alvalens.my.id",
 	jobTitle: "Full Stack Software Engineer",
 	worksFor: [
@@ -78,7 +78,7 @@ const jsonLd = {
 		name: "Universitas Negeri Malang",
 	},
 	sameAs: [
-		"https://github.com/Alvalens",
+		"https://github.com/Ubays",
 		"https://www.linkedin.com/in/alvalen-shafel-8a081a254/",
 		"https://www.instagram.com/alvalens_/",
 	],

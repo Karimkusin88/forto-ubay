@@ -1,5 +1,5 @@
-// Copyright (C) 2025 Alvalen Bilyunazra
-// This file is part of Alvalens-porto-2-nextJs.
+// Copyright (C) 2025 Ubay Bilyunazra
+// This file is part of Ubays-porto-2-nextJs.
 // Licensed under the GNU GPL v3.0. See LICENSE for details.
 
 "use client";
@@ -81,7 +81,7 @@ const MyPage = () => {
 									width={500}
 									height={500}
 									className="rounded-full w-full h-full object-cover "
-									alt="Alvalens"
+									alt="Ubays"
 									placeholder="blur"
 								/>
 							</div>
@@ -94,7 +94,7 @@ const MyPage = () => {
 								delay: 0.2,
 								type: "spring",
 							}}>
-							Alvalen Shafel
+							Ubay
 						</motion.h3>
 						<motion.h1
 							className="text-black text-4xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold my-2 md:my-5"
@@ -104,7 +104,7 @@ const MyPage = () => {
 								delay: 0.3,
 								type: "spring",
 							}}>
-							Full Stack Software Engineer
+							Digital & Real World Builder
 						</motion.h1>
 						<motion.p
 							className="title text-md 2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
@@ -114,12 +114,7 @@ const MyPage = () => {
 								delay: 0.4,
 								type: "spring",
 							}}>
-							Hi! I&rsquo;am Alvalen, A fullstack software
-							engineer specializing in modern Web Development with
-							a growing focus on Artificial Intelligence. I
-							architect scalable, production-ready engines—from
-							high-traffic Java microservices to RAG-powered SaaS
-							platforms.
+							Halo! Saya Ubay, memadukan keahlian sebagai Software Engineer dan Praktisi Konstruksi di IYS Works. Saya merancang solusi digital yang powerful, serta membangun struktur dunia nyata yang kokoh dan elegan.
 						</motion.p>
 						<motion.div
 							className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
@@ -130,16 +125,16 @@ const MyPage = () => {
 								type: "spring",
 							}}>
 							<Button variation="primary">
-								<Link
-									href={"/docs/cv.pdf"}
+								<a
+									href={"http://www.iys.works"}
 									target="_blank"
 									rel="noopener noreferrer"
-									download>
-									Download CV
-								</Link>
+									>
+									Kunjungi IYS Works
+								</a>
 							</Button>
 							<Button variation="secondary">
-								<a href="#contact">Contact Me</a>
+								<a href="#contact">Hubungi Saya</a>
 							</Button>
 						</motion.div>
 					</motion.div>
@@ -157,7 +152,7 @@ const MyPage = () => {
 								width={400}
 								height={550}
 								placeholder="blur"
-								alt="Alvalens"
+								alt="Ubays"
 								className="rounded-full w-full h-full object-cover"
 							/>
 						</div>
@@ -190,7 +185,7 @@ const MyPage = () => {
 								fill
 								sizes="(max-width: 768px) 80vw, 30vw"
 								className="object-cover"
-								alt="Alvalens"
+								alt="Ubays"
 								placeholder="blur"
 							/>
 						</motion.div>
@@ -204,7 +199,7 @@ const MyPage = () => {
 								delay: 0.1,
 								type: "spring",
 							}}>
-							About Me
+							Tentang Saya
 						</motion.h1>
 						<Hr />
 						<motion.p
@@ -215,8 +210,8 @@ const MyPage = () => {
 								delay: 0.2,
 								type: "spring",
 							}}>
-							A brief introduction my journey as a software
-							engineer.
+							Cerita singkat perjalanan karir saya sebagai
+                            <br /> Software Engineer dan Praktisi Konstruksi.
 						</motion.p>
 						<motion.div
 							initial={{ y: 40, opacity: 0 }}
@@ -226,7 +221,7 @@ const MyPage = () => {
 								type: "spring",
 							}}>
 							<Button variation="primary">
-								<Link href="/about">Learn More</Link>
+								<Link href="/about">Pelajari Lebih Lanjut</Link>
 							</Button>
 						</motion.div>
 					</div>
@@ -258,7 +253,7 @@ const MyPage = () => {
 								fill
 								sizes="(max-width: 768px) 80vw, 30vw"
 								className="object-cover"
-								alt="Alvalens Setup"
+								alt="Ubays Setup"
 								placeholder="blur"
 							/>
 						</motion.div>
@@ -272,7 +267,7 @@ const MyPage = () => {
 								delay: 0.1,
 								type: "spring",
 							}}>
-							My Projects
+							Proyek Saya
 						</motion.h1>
 						<Hr />
 						<motion.p
@@ -283,10 +278,10 @@ const MyPage = () => {
 								delay: 0.2,
 								type: "spring",
 							}}>
-							Selected works that I&apos;ve built over the years.
+							Karya-karya pilihan yang telah saya bangun 
 							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
 								{" "}
-								and currently working on.
+								baik di dunia digital maupun konstruksi nyata.
 							</span>
 						</motion.p>
 						<motion.div
@@ -297,14 +292,14 @@ const MyPage = () => {
 								type: "spring",
 							}}>
 							<Button variation="primary">
-								<Link href="/projects">Learn More</Link>
+								<Link href="/projects">Lihat Proyek</Link>
 							</Button>
 						</motion.div>
 					</div>
 				</div>
 			</Section>
 			<Section>
-				<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
+				<div id="contact" className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
 					<div className="z-0 mb-48 md:mb-0  md:absolute md:top-1/2  md:right-[10%] md:-translate-y-1/2">
 						<motion.div
 							className="relative bg-slate-300 rounded-sm h-[400px] md:h-[60vh] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
@@ -329,7 +324,7 @@ const MyPage = () => {
 								fill
 								sizes="(max-width: 768px) 80vw, 30vw"
 								className="object-cover"
-								alt="Alvalens Setup"
+								alt="Ubays Setup"
 								placeholder="blur"
 							/>
 						</motion.div>
@@ -343,7 +338,7 @@ const MyPage = () => {
 								delay: 0.1,
 								type: "spring",
 							}}>
-							Get In Touch
+							Mari Berkolaborasi
 						</motion.h1>
 						<Hr />
 						<motion.p
@@ -354,9 +349,9 @@ const MyPage = () => {
 								delay: 0.2,
 								type: "spring",
 							}}>
-							Feel free to contact me if you have any{" "}
+							Jangan ragu untuk menghubungi saya untuk{" "}
 							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-								questions or just want to say hi.
+								bertanya atau sekadar menyapa.
 							</span>
 						</motion.p>
 						<motion.p
@@ -367,14 +362,14 @@ const MyPage = () => {
 								delay: 0.3,
 								type: "spring",
 							}}>
-							<a href="mailto:Alvalen.shafel04@gmail.com?subject=Hello&body=Hello Alvalens,">
-								alvalen.shafel04@gmail.com
+							<a href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay,">
+								kontak@iys.works
 							</a>
 						</motion.p>
 						{/* icons */}
 						<div className="flex justify-center items-center space-x-4">
 							<motion.a
-								href="mailto:Alvalen.shafel04@gmail.com?subject=Hello&body=Hello Alvalens,"
+								href="mailto:kontak@iys.works?subject=Hello&body=Halo Ubay,"
 								aria-label="Send email"
 								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 								initial={{ y: 40, opacity: 0 }}
@@ -390,7 +385,7 @@ const MyPage = () => {
 							</motion.a>
 
 							<motion.a
-								href="https://github.com/Alvalens"
+								href="https://github.com/Karimkusin88"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="GitHub profile"
@@ -407,10 +402,10 @@ const MyPage = () => {
 								/>
 							</motion.a>
 							<motion.a
-								href="https://www.instagram.com/alvalens_/"
+								href="http://www.iys.works"
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label="Instagram profile"
+								aria-label="IYS Works Website"
 								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 								initial={{ opacity: 0, y: 40 }}
 								whileInView={{ opacity: 1, y: 0 }}
@@ -419,41 +414,7 @@ const MyPage = () => {
 									opacity: { delay: 0.4 },
 								}}>
 								<FontAwesomeIcon
-									icon={faInstagram}
-									className="text-3xl"
-								/>
-							</motion.a>
-							<motion.a
-								href="https://www.linkedin.com/in/alvalen-shafel-8a081a254/"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label="LinkedIn profile"
-								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-								initial={{ opacity: 0, y: 40 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{
-									y: { delay: 0.4 },
-									opacity: { delay: 0.5 },
-								}}>
-								<FontAwesomeIcon
 									icon={faLinkedin}
-									className="text-3xl"
-								/>
-							</motion.a>
-							<motion.a
-								href="https://discordapp.com/users/bloody#6118"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label="Discord profile"
-								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-								initial={{ opacity: 0, y: 40 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{
-									y: { delay: 0.5 },
-									opacity: { delay: 0.6 },
-								}}>
-								<FontAwesomeIcon
-									icon={faDiscord}
 									className="text-3xl"
 								/>
 							</motion.a>
