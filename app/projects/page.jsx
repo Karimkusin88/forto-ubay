@@ -177,8 +177,8 @@ export default function Page() {
 							Ciburial Eco-Digital Village
 						</h2>
 						<p className="text-gray-600 text-justify title text-lg">
-							Inovasi Desa Mandiri Berbasis Kearifan Lokal dan Teknologi Tepat Guna — Kp. Ciburial, Garut, Jawa Barat. Proyek ini hadir dengan semangat "Merawat akar, menumbuhkan harapan", mengintegrasikan potensi lokal dan inovasi digital untuk membangun kampung mandiri yang berwawasan ekologis.
-						</p>{" "}
+							Inovasi Desa Mandiri Berbasis Kearifan Lokal dan Teknologi Tepat Guna — Kp. Ciburial, Garut, Jawa Barat. Proyek ini hadir dengan semangat &quot;Merawat akar, menumbuhkan harapan&quot;, mengintegrasikan potensi lokal dan inovasi digital untuk membangun kampung mandiri yang berwawasan ekologis.
+						</p>
 						<div className="mt-3">
 							<Button variation="primary">
 								<Link href="projects/ciburial-village">More</Link>
