@@ -1,45 +1,34 @@
-// components/Intelliticks.js
+// components/Chat.jsx
 "use client"
-import { useEffect } from "react";
+import Link from "next/link";
 
-// Component for Intelliticks chat widget
-const Chat = () => {
-	useEffect(() => {
-		const loadChat = () => {
-			if (window.iticks) return;
-			(function (I, L, T, i, c, k, s) {
-				if (I.iticks) return;
-				I.iticks = { host: c, settings: s, clientId: k, cdn: L, queue: [] };
-				var h = T.head || T.documentElement;
-				var e = T.createElement(i);
-				e.async = true;
-				e.src = (L || c) + "/client/inject-v2.min.js";
-				h.insertBefore(e, h.firstChild);
-				I.iticks.call = function (a, b) {
-					I.iticks.queue.push([a, b]);
-				};
-			})(
-				window,
-				"https://cdn-v1.intelliticks.com/prod/common",
-				document,
-				"script",
-				"https://app.intelliticks.com",
-				"u3cWw3sDpdKexqXCY_c",
-				{}
-			);
-		};
-
-		// Defer until browser is idle, or after 5s fallback
-		if (typeof requestIdleCallback !== "undefined") {
-			const id = requestIdleCallback(loadChat, { timeout: 5000 });
-			return () => cancelIdleCallback(id);
-		} else {
-			const timer = setTimeout(loadChat, 3000);
-			return () => clearTimeout(timer);
-		}
-	}, []);
-
-	return null;
-};
-
-export default Chat;
+// Simple static chat button that opens an email to the site owner.
+export default function Chat() {
+	return (
+		<div style={{ position: "fixed", right: 16, bottom: 16, zIndex: 50 }}>
+			<Link
+				href="mailto:ubayrahmat@iys.works?subject=Halo&body=Hai%20Ubay,"
+				aria-label="Kirim email ke Ubay"
+				legacyBehavior
+			>
+				<a
+					style={{
+						display: "flex",
+						alignItems: "center",
+						gap: 10,
+						padding: "12px 16px",
+						background: "#111827",
+						color: "#fff",
+						borderRadius: 9999,
+						boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
+						textDecoration: "none",
+						fontWeight: 600,
+					}}
+				>
+					<span style={{ width: 40, height: 40, borderRadius: 9999, background: "#fff", color: "#111827", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700 }}>UB</span>
+					<span>Butuh bantuan?</span>
+				</a>
+			</Link>
+		</div>
+	);
+}

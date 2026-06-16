@@ -5,4 +5,5 @@ Allow: /
 # Host
 Host: https://github.com/Karimkusin88
 
+# Sitemaps
 Sitemap: https://github.com/Karimkusin88/sitemap.xml
