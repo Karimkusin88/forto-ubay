@@ -402,10 +402,10 @@ const MyPage = () => {
 								/>
 							</motion.a>
 							<motion.a
-								href="http://www.iys.works"
+								href="https://www.linkedin.com/in/ubay-rahmat-hidayat-2b4b1431b"
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label="IYS Works Website"
+								aria-label="LinkedIn profile"
 								className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 								initial={{ opacity: 0, y: 40 }}
 								whileInView={{ opacity: 1, y: 0 }}
