@@ -1,13 +1,66 @@
 @import "tailwindcss";
 
+/* =============================================
+   DESIGN TOKENS - Premium Dark Portfolio Theme
+   ============================================= */
+:root {
+	--color-bg-primary: #0f0f13;
+	--color-bg-secondary: #16161d;
+	--color-bg-card: #1c1c26;
+	--color-accent: #7c5cbf;
+	--color-accent-light: #a07de0;
+	--color-accent-glow: rgba(124, 92, 191, 0.25);
+	--color-text-primary: #f0eef8;
+	--color-text-secondary: #9994b3;
+	--color-text-muted: #5a566e;
+	--color-border: rgba(124, 92, 191, 0.2);
+	--color-sidebar-bg: rgba(22, 22, 29, 0.92);
+	--gradient-accent: linear-gradient(135deg, #7c5cbf 0%, #a07de0 100%);
+	--gradient-bg: linear-gradient(135deg, #0f0f13 0%, #16161d 50%, #1a1426 100%);
+}
+
 html {
 	font-size: clamp(13px, 0.89vw, 17px) !important;
 }
 
 body {
 	font-family: var(--font-poppins), sans-serif !important;
-	color: black;
-	background-color: rgb(230, 230, 230);
+	color: var(--color-text-primary);
+	background: var(--gradient-bg);
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+
+/* =============================================
+   TYPOGRAPHY - Fix truncated declaration
+   ============================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-jost), var(--font-poppins), sans-serif;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--color-text-primary);
+}
+
+/* =============================================
+   SCROLLBAR - Premium styled scrollbar
+   ============================================= */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: var(--color-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--color-accent);
+	border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-accent-light);
 }
 
 /* Hide scrollbar only for fullpage scroll pages */
@@ -28,64 +81,51 @@ html:has(body.fullpage-active) {
 	scrollbar-width: none; /* Firefox */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--font-jost), sans-serif !important;
-}
-
-.title {
-	font-family: var(--font-jost), sans-serif !important;
-}
-
-.section {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.navbar {
-	z-index: 49 !important;
-}
-
-/* h2, h3, h4, h5, h6 {
-	@apply text-gray-600;
-} */
-
-span {
-	font-family: var(--font-jost), sans-serif;
-}
-
-li {
-	@apply list-none relative;
-}
-
-
-td,
-th {
-	@apply py-2 px-3;
-}
-
-a[title]:hover:after {
-	margin-left: -100px;
-	margin-top: -50px;
-	position: absolute;
-	content: attr(title);
-	padding: 0.5rem;
-	white-space: nowrap;
-	z-index: 1;
-	background-color: #333333;
-	color: #fff;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	font-size: 0.8rem;
-}
-
+/* =============================================
+   SELECTION HIGHLIGHT
+   ============================================= */
 ::selection {
-	background: #333333;
+	background: var(--color-accent);
+	color: #fff;
+}
+
+/* =============================================
+   UTILITY CLASSES - Accent & Glow helpers
+   ============================================= */
+.text-accent {
+	color: var(--color-accent-light);
+}
+
+.bg-accent {
+	background: var(--gradient-accent);
+}
+
+.glow-accent {
+	box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.border-accent {
+	border-color: var(--color-border);
+}
+
+/* =============================================
+   CARD GLASS EFFECT
+   ============================================= */
+.glass-card {
+	background: rgba(28, 28, 38, 0.7);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--color-border);
+	border-radius: 1rem;
+}
+
+/* =============================================
+   LINK HOVER ACCENT
+   ============================================= */
+a:not([class]) {
+	color: var(--color-accent-light);
+	transition: color 0.2s ease;
+}
+a:not([class]):hover {
 	color: #fff;
 }
