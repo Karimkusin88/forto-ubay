@@ -167,30 +167,30 @@ export default function Education() {
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
-								<p className="text-gray-600 text-justify title text-lg">
+								<p className="text-gray-300 text-justify title text-lg">
 									Setelah lulus dari{" "}
-									<span className="text-black font-medium">
+									<span className="text-white font-medium">
 										MA Bani Abi Bakar Bungbulang
 									</span>{" "}
 									pada tahun 2015, saya tidak menempuh pendidikan perguruan tinggi. Sebaliknya, saya memilih untuk terjun langsung ke dunia kerja dan belajar dari kehidupan nyata (Street Smart).
 									<br />
 									<br />
 									Saya percaya bahwa {" "}
-									<span className="text-black font-medium">
+									<span className="text-white font-medium">
 										pendidikan terbaik didapatkan di lapangan
 									</span>
 									. Selama sepuluh tahun terakhir, saya menempa diri melalui berbagai mega proyek infrastruktur, berhadapan langsung dengan masalah instalasi kelistrikan yang rumit, dan belajar mengelola bisnis.
 									<br />
 									<br />
 									Keberanian untuk belajar mandiri (otodidak) ini juga yang memotivasi saya untuk terjun ke ranah{" "}
-									<span className="text-black font-medium">
+									<span className="text-white font-medium">
 										Teknologi & Web3
 									</span>{" "}
 									dan berhasil membangun ekosistem aplikasi tanpa pendidikan formal IT.
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
-								<div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
+								<div className="bg-gray-700 text-white px-2 py-1 rounded-2xl">
 									Street Smart & Self-Taught
 								</div>
 							</div>
@@ -233,7 +233,7 @@ export default function Education() {
 													achievement.year ? (
 													<div className="flex items-center gap-3 mb-3 mt-2">
 														<div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-															<span className="text-xs font-bold text-gray-600">
+															<span className="text-xs font-bold text-gray-300">
 																{
 																	achievement.year
 																}
@@ -244,7 +244,7 @@ export default function Education() {
 												) : null}
 
 												{/* Glassmorphism achievement card with monochrome to color effect */}
-												<div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 shadow-lg hover:bg-white/30 transition-all duration-300 hover:shadow-xl grayscale hover:grayscale-0">
+												<div className="bg-gray-800/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 shadow-lg hover:bg-gray-800/30 transition-all duration-300 hover:shadow-xl grayscale hover:grayscale-0">
 													<div className="flex items-center gap-4">
 														<div
 															className={`aspect-square w-10 rounded-full bg-gradient-to-r ${achievement.color} flex items-center justify-center text-primary-foreground transition-all duration-300`}>
@@ -266,7 +266,7 @@ export default function Education() {
 																	achievement.subtitle
 																}
 															</p>
-															<div className="text-xs text-gray-500 mt-1">
+															<div className="text-xs text-gray-400 mt-1">
 																{
 																	achievement.date
 																}
@@ -296,7 +296,7 @@ export default function Education() {
 										onClick={() =>
 											setIsExpanded(!isExpanded)
 										}
-										className="flex items-center gap-2 px-6 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-full hover:bg-white/40 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl">
+										className="flex items-center gap-2 px-6 py-3 bg-gray-800/30 backdrop-blur-md border border-white/40 rounded-full hover:bg-gray-800/40 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl">
 										<span>
 											{isExpanded
 												? `Show Less`
