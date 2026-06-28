@@ -152,14 +152,14 @@ function ExperienceCard({ experience, index, isEven }) {
 			{" "}
 			{/* Card */}
 			<div
-				className={`bg-white/20 backdrop-blur-sm border border-gray-300/30 rounded-2xl p-6 shadow-lg 
-				hover:shadow-xl hover:bg-white/30 transition-all duration-300 ml-12 md:ml-0`}>
+				className={`bg-gray-800/20 backdrop-blur-sm border border-gray-300/30 rounded-2xl p-6 shadow-lg 
+				hover:shadow-xl hover:bg-gray-800/30 transition-all duration-300 ml-12 md:ml-0`}>
 				{/* Company & Position */}
 				<div className="mb-4">
-					<h3 className="font-bold text-xl text-black mb-1">
+					<h3 className="font-bold text-xl text-white mb-1">
 						{experience.company}
 					</h3>
-					<h4 className="font-medium text-lg text-gray-700">
+					<h4 className="font-medium text-lg text-gray-200">
 						{experience.position}
 						<span className="text-sm font-normal text-gray-500 ml-2">
 							• {experience.type}
@@ -168,7 +168,7 @@ function ExperienceCard({ experience, index, isEven }) {
 				</div>
 
 				{/* Description */}
-				<p className="text-gray-600 text-justify leading-relaxed mb-4">
+				<p className="text-gray-300 text-justify leading-relaxed mb-4">
 					{experience.description}
 				</p>
 
@@ -177,7 +177,7 @@ function ExperienceCard({ experience, index, isEven }) {
 					{experience.skills.map((skill, idx) => (
 						<span
 							key={idx}
-							className="bg-gray-200/60 hover:bg-gray-300/60 border border-gray-400/40 text-black px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
+							className="bg-gray-200/60 hover:bg-gray-700/60 border border-gray-600/40 text-white px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
 							{skill}
 						</span>
 					))}
