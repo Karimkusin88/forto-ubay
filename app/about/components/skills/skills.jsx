@@ -63,8 +63,8 @@ function SkillCard({ skill, isSelected, onClick }) {
 			onClick={onClick}
 			className={`relative cursor-pointer group p-6 rounded-2xl border transition-all duration-300 ${
 				isSelected
-					? "bg-white/20 border-black border-2 shadow-lg"
-					: "bg-white/10 border-gray-300/20 hover:bg-white/20 hover:border-gray-300/30"
+					? "bg-gray-800/20 border-black border-2 shadow-lg"
+					: "bg-gray-800/10 border-gray-300/20 hover:bg-gray-800/20 hover:border-gray-300/30"
 			}`}
 			whileHover={{ scale: 1.03 }}
 			whileTap={{ scale: 0.97 }}
@@ -79,15 +79,15 @@ function SkillCard({ skill, isSelected, onClick }) {
 			<div className="relative z-10 flex flex-col items-center text-center space-y-4">
 				<div
 					className={`p-4 rounded-xl transition-all duration-300 ${
-						isSelected ? "bg-white/30" : "bg-white/10 group-hover:bg-white/20"
+						isSelected ? "bg-gray-800/30" : "bg-gray-800/10 group-hover:bg-gray-800/20"
 					}`}>
-					<Icon className="w-8 h-8 text-black" />
+					<Icon className="w-8 h-8 text-white" />
 				</div>
 				<div>
-					<h3 className="font-semibold text-black text-lg mb-2">
+					<h3 className="font-semibold text-white text-lg mb-2">
 						{skill.title}
 					</h3>
-					<p className="text-gray-600 text-sm leading-relaxed">
+					<p className="text-gray-300 text-sm leading-relaxed">
 						{skill.description}
 					</p>
 				</div>
@@ -113,12 +113,12 @@ function SkillDetails({ selectedSkill }) {
     >
       {/* Languages & Frameworks Section */}
       <motion.div
-        className="bg-white/40 border border-gray-300/30 rounded-2xl p-8 shadow-sm"
+        className="bg-gray-800/40 border border-gray-300/30 rounded-2xl p-8 shadow-sm"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h3 className="text-2xl font-semibold text-black mb-6 text-center">
+        <h3 className="text-2xl font-semibold text-white mb-6 text-center">
           Technology Stack
         </h3>
         <motion.div
@@ -136,7 +136,7 @@ function SkillDetails({ selectedSkill }) {
                 ${
                   skill.highlight
                     ? "bg-black text-white shadow-md border-black scale-105 z-10 hover:shadow-lg"
-                    : "bg-gradient-to-r from-gray-200/60 to-white/40 border border-gray-400/40 text-black hover:bg-white/60"
+                    : "bg-gradient-to-r from-gray-200/60 to-white/40 border border-gray-600/40 text-white hover:bg-gray-800/60"
                 }`}
             >
               {skill.highlight && (
@@ -150,7 +150,7 @@ function SkillDetails({ selectedSkill }) {
 
       {/* Tools Section */}
       <motion.div
-        className="bg-white/20 border border-gray-300/20 rounded-2xl p-8"
+        className="bg-gray-800/20 border border-gray-300/20 rounded-2xl p-8"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4 }}
@@ -169,7 +169,7 @@ function SkillDetails({ selectedSkill }) {
             <motion.span
               key={tool}
               variants={tagVariants}
-              className="px-4 py-1.5 bg-gray-300/30 border border-gray-400/20 rounded-lg text-gray-600 text-xs font-medium"
+              className="px-4 py-1.5 bg-gray-700/30 border border-gray-600/20 rounded-lg text-gray-300 text-xs font-medium"
             >
               {tool}
             </motion.span>
@@ -193,7 +193,7 @@ export default function Skills() {
 					<h2 className="text-5xl font-bold bg-gradient-to-r from-black to-gray-600 bg-clip-text text-transparent">
 						Skills & Expertise
 					</h2>
-					<p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+					<p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
 						Explore my technical skills across different domains. Click on any
 						category to see the specific technologies and tools I work with.
 					</p>
