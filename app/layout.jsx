@@ -24,66 +24,46 @@ const jost = Jost({
 });
 
 export const metadata = {
-	metadataBase: new URL("https://github.com/Karimkusin88"),
+	// FIXED: metadataBase sekarang mengarah ke URL deploy lo (ganti dengan URL Vercel lo yang sebenarnya)
+	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://forto-ubay.vercel.app"),
 	title: "Ubay Rahmat Hidayat | Portofolio",
 
 	description:
 		"Ubay Rahmat Hidayat, Multidisciplinary Builder memadukan keahlian Konstruksi Fisik dan Teknologi Web3. Founder & Lead Contractor IYS Works.",
 
 	author: "Ubay Rahmat Hidayat",
-	siteUrl: "https://github.com/Karimkusin88",
-	applicationName: "Ubay Rahmat Hidayat",
 
 	keywords: [
-		"ubay",
-		"ubays",
-		"karimkusin88",
-		"porto-ubay",
+		"Ubay Rahmat Hidayat",
+		"Portfolio",
+		"Web Developer",
+		"Web3",
+		"IYS Works",
+		"Konstruksi",
+		"Next.js",
 	],
 
 	openGraph: {
-		type: "website",
-		url: "https://github.com/Karimkusin88",
 		title: "Ubay Rahmat Hidayat | Portofolio",
-		siteName: "Ubay Rahmat Hidayat | Portofolio",
-		description: "My name is Ubay Rahmat Hidayat, This is my portofolio website.",
-		images: [
-			{
-				url: "/og-image-rev.png",
-				alt: "Ubays Portofolio",
-				width: 1200,
-				height: 630,
-			},
-		],
+		description:
+			"Multidisciplinary Builder — Konstruksi Fisik & Teknologi Web3. Founder & Lead Contractor IYS Works.",
+		type: "website",
+		locale: "id_ID",
 	},
-};
 
-const jsonLd = {
-	"@context": "https://schema.org",
-	"@type": "Person",
-	name: "Ubay Rahmat Hidayat",
-	url: "https://github.com/Karimkusin88",
-	jobTitle: "Multidisciplinary Builder",
-	worksFor: [
-		{ "@type": "Organization", name: "IYS Works" }
-	],
-	alumniOf: {
-		"@type": "HighSchool",
-		name: "MA Bani Abi Bakar Bungbulang",
+	twitter: {
+		card: "summary_large_image",
+		title: "Ubay Rahmat Hidayat | Portofolio",
+		description: "Multidisciplinary Builder — Konstruksi Fisik & Teknologi Web3.",
 	},
-	sameAs: [
-		"https://github.com/Karimkusin88"
-	],
 };
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${poppins.variable} ${jost.variable}`}>
+		<html
+			lang="id"
+			className={`${poppins.variable} ${jost.variable}`}>
 			<body>
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-				/>
 				<ClientTopProgressBar />
 				<Navbar />
 				{children}
