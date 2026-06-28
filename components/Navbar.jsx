@@ -44,6 +44,13 @@ const itemVariants = {
 	},
 };
 
+const navLinks = [
+	{ href: "/", label: "Home", delay: 0.1 },
+	{ href: "/about", label: "About", delay: 0.18 },
+	{ href: "/projects", label: "Projects", delay: 0.26 },
+	{ href: "/#contact", label: "Contact", delay: 0.34 },
+];
+
 const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 	const handleItemClick = () => {
 		setIsNavOpen(false);
@@ -56,118 +63,164 @@ const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 				variants={navVariant}
 				animate={isNavOpen ? "open" : "closed"}
 				initial={false}>
-				<div className="relative opacity-95 flex flex-col items-center space-x-8 min-h-[100vh] bg-gray-700 min-w-[100vw] ">
-					<div className="flex flex-col items-center space-y-8 my-auto mx-0 z-50">
-						{/* title */}
-						<motion.h1
+				{/* IMPROVED: Dark overlay dengan accent gradient, bukan plain gray-700 */}
+				<div
+					className="relative flex flex-col items-center space-x-8 min-h-[100vh] min-w-[100vw]"
+					style={{
+						background: "linear-gradient(135deg, #0f0f13 0%, #1a1426 60%, #0f0f13 100%)",
+						opacity: 0.97,
+					}}>
+					{/* Decorative glow orb */}
+					<div
+						className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full pointer-events-none"
+						style={{
+							background: "radial-gradient(circle, rgba(124,92,191,0.15) 0%, transparent 70%)",
+						}}
+					/>
+
+					<div className="flex flex-col items-center justify-center min-h-screen gap-10 z-10">
+						{/* Nav Logo / Name */}
+						<motion.div
+							custom={0.05}
 							variants={itemVariants}
 							animate={isNavOpen ? "open" : "closed"}
-							className="text-6xl font-bold text-white ">
-							Menu
-						</motion.h1>
-						<Link href="/#home">
-							<div
-								className="text-2xl font-bold text-white"
-								onClick={handleItemClick}>
-								<motion.h2
-									className="text-white"
+							className="mb-4 text-center">
+							<span
+								className="text-xs uppercase tracking-[8px] font-medium"
+								style={{ color: "var(--color-accent-light)" }}>
+								Navigation
+							</span>
+						</motion.div>
+
+						{/* Nav Links */}
+						<nav className="flex flex-col items-center gap-6">
+							{navLinks.map(({ href, label, delay }) => (
+								<motion.div
+									key={href}
+									custom={delay}
 									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.1}>
-									Home
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/about">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.2}>
-									About
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/projects">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.3}>
-									Projects
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/#contact">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.4}>
-									Hubungi Saya
-								</motion.h2>
-							</div>
-						</Link>
+									animate={isNavOpen ? "open" : "closed"}>
+									<Link
+										href={href}
+										onClick={handleItemClick}
+										className="group relative text-4xl md:text-5xl font-semibold transition-colors duration-300"
+										style={{ color: "var(--color-text-secondary)", fontFamily: "var(--font-jost)" }}>
+										<span className="group-hover:text-white transition-colors duration-300">
+											{label}
+										</span>
+										{/* Accent underline on hover */}
+										<span
+											className="absolute -bottom-1 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-300"
+											style={{ background: "var(--gradient-accent)" }}
+										/>
+									</Link>
+								</motion.div>
+							))}
+						</nav>
+
+						{/* Social links in nav */}
+						<motion.div
+							custom={0.45}
+							variants={itemVariants}
+							animate={isNavOpen ? "open" : "closed"}
+							className="mt-8 flex gap-6">
+							<a
+								href="https://github.com/Karimkusin88"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-sm transition-colors duration-300"
+								style={{ color: "var(--color-text-muted)" }}
+								onMouseEnter={(e) => (e.target.style.color = "var(--color-accent-light)")}
+								onMouseLeave={(e) => (e.target.style.color = "var(--color-text-muted)")}>
+								GitHub
+							</a>
+							<span style={{ color: "var(--color-text-muted)" }}>·</span>
+							<a
+								href="https://linkedin.com/in/ubayrahmathidayat"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-sm transition-colors duration-300"
+								style={{ color: "var(--color-text-muted)" }}
+								onMouseEnter={(e) => (e.target.style.color = "var(--color-accent-light)")}
+								onMouseLeave={(e) => (e.target.style.color = "var(--color-text-muted)")}>
+								LinkedIn
+							</a>
+						</motion.div>
 					</div>
 				</div>
 			</motion.div>
+
+			{/* Close backdrop */}
+			{isNavOpen && (
+				<div
+					className="fixed inset-0 z-[44]"
+					onClick={handleItemClick}
+				/>
+			)}
 		</>
 	);
 };
 
 const Navbar = () => {
-	const navRef = useRef(null);
 	const [isNavOpen, setIsNavOpen] = useState(false);
-
-	const toggleNav = () => {
-		setIsNavOpen(!isNavOpen);
-	};
 
 	return (
 		<>
+			<NavItems
+				isNavOpen={isNavOpen}
+				setIsNavOpen={setIsNavOpen}
+			/>
+
+			{/* IMPROVED: Navbar top bar dengan glassmorphism */}
 			<nav
-				ref={navRef}
-				className={`navbar px-5 md:px-24 w-screen fixed transition-colors ease duration-500 ${
-					isNavOpen
-						? "backdrop-filter backdrop-blur-md bg-gray-700 bg-opacity-50"
-						: "backdrop-filter backdrop-blur-md"
-				} inset-0  bg-opacity-50 flex flex-row justify-between items-center h-16 z-50 `}>
-				<div>
-					<h1
-						className={`text-2xl ml-2 md:ml-0 transition-colors ease duration-500 ${
-							isNavOpen ? "text-white" : ""
-						}`}>
-						Ubays
-					</h1>
-				</div>
-				<div className="flex flex-row items-center">
-					<button
-						aria-label={isNavOpen ? "Close menu" : "Open menu"}
-						className="burger button flex flex-col justify-center items-center space-y-1.5 "
-						onClick={toggleNav}>
-						<div
-							className={`w-10 h-1 bg-black rounded-full transition-all ease duration-300 ${
-								isNavOpen ? "rotate-45   bg-white translate-y-[2px]" : ""
-							}`}></div>
-						<div
-							className={`w-10 h-1 bg-black rounded-full transition-all ease duration-300 ${
-								isNavOpen ? "-rotate-45 -translate-y-2 bg-white" : ""
-							}`}></div>
-					</button>
-				</div>
+				className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4"
+				style={{
+					background: isNavOpen
+						? "transparent"
+						: "linear-gradient(to bottom, rgba(15,15,19,0.95) 0%, rgba(15,15,19,0) 100%)",
+					transition: "background 0.3s ease",
+				}}>
+				{/* Logo / Name */}
+				<Link
+					href="/"
+					className="relative z-[46] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+					style={{ color: isNavOpen ? "var(--color-text-primary)" : "var(--color-text-primary)" }}>
+					<span style={{ color: "var(--color-accent-light)" }}>U</span>bay
+				</Link>
+
+				{/* Burger Button */}
+				<button
+					id="navbar-toggle"
+					className="relative z-[46] flex flex-col justify-center items-center gap-[5px] w-8 h-8 cursor-pointer group"
+					onClick={() => setIsNavOpen((prev) => !prev)}
+					aria-label="Toggle navigation menu"
+					aria-expanded={isNavOpen}>
+					<span
+						className="block h-[2px] w-6 transition-all duration-300 rounded-full"
+						style={{
+							background: "var(--color-text-primary)",
+							transform: isNavOpen ? "translateY(7px) rotate(45deg)" : "none",
+						}}
+					/>
+					<span
+						className="block h-[2px] w-4 transition-all duration-300 rounded-full"
+						style={{
+							background: "var(--color-accent-light)",
+							opacity: isNavOpen ? 0 : 1,
+							transform: isNavOpen ? "scaleX(0)" : "none",
+						}}
+					/>
+					<span
+						className="block h-[2px] w-6 transition-all duration-300 rounded-full"
+						style={{
+							background: "var(--color-text-primary)",
+							transform: isNavOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+						}}
+					/>
+				</button>
 			</nav>
-			{/* items */}
-			<NavItems isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
 		</>
 	);
 };
+
 export default Navbar;
