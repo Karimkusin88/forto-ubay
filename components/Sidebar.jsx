@@ -20,40 +20,76 @@ const Sidebar = () => {
 	const { moveTo, activeIndex } = useFullPage();
 
 	return (
-		<div className="hidden md:flex fixed z-40 bg-gray-700 h-[50vh] w-14 flex-col justify-between items-center p-4 left-0 top-1/4 rounded-e-3xl">
-			<ul
-				id="sidebar"
-				className="flex flex-col justify-evenly items-center h-full text-gray-50">
-				{navItems.map((item, index) => (
-					<li key={item.anchor} data-menuanchor={item.anchor}>
-						<button
-							aria-label={item.label}
-							onClick={() => moveTo(index)}
-							className="relative flex items-center justify-center w-10 h-10">
-							{activeIndex === index && (
-								<motion.div
-									layoutId="sidebar-active"
-									className="absolute inset-0 bg-gray-500 rounded-xl"
-									transition={{
-										type: "spring",
-										stiffness: 350,
-										damping: 30,
-									}}
-								/>
-							)}
-							<FontAwesomeIcon
-								icon={item.icon}
-								className={`relative z-10 text-xl transition-transform duration-300 ${
-									activeIndex === index
-										? "scale-110"
-										: "scale-100"
-								}`}
-							/>
-						</button>
-					</li>
-				))}
-			</ul>
-		</div>
+		<motion.div
+			initial={{ x: -60, opacity: 0 }}
+			animate={{ x: 0, opacity: 1 }}
+			transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
+			className="hidden md:flex fixed z-40 h-auto w-14 flex-col justify-between items-center p-3 left-4 top-1/2 -translate-y-1/2 rounded-2xl gap-2"
+			style={{
+				background: "rgba(22, 22, 29, 0.85)",
+				backdropFilter: "blur(16px)",
+				WebkitBackdropFilter: "blur(16px)",
+				border: "1px solid rgba(124, 92, 191, 0.2)",
+				boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(124,92,191,0.05)",
+			}}>
+			{navItems.map(({ icon, label, anchor }, index) => {
+				const isActive = activeIndex === index;
+				return (
+					<motion.button
+						key={anchor}
+						id={`sidebar-nav-${anchor}`}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						onClick={() => moveTo(index)}
+						aria-label={label}
+						title={label}
+						className="relative w-9 h-9 flex items-center justify-center rounded-xl transition-all duration-300 group"
+						style={{
+							background: isActive
+								? "linear-gradient(135deg, #7c5cbf 0%, #a07de0 100%)"
+								: "transparent",
+							color: isActive ? "#fff" : "rgba(153, 148, 179, 0.7)",
+							boxShadow: isActive ? "0 4px 15px rgba(124, 92, 191, 0.4)" : "none",
+						}}>
+						<FontAwesomeIcon
+							icon={icon}
+							className="w-4 h-4 transition-colors duration-200"
+							style={{
+								color: isActive ? "#fff" : "inherit",
+							}}
+						/>
+
+						{/* Tooltip */}
+						<span
+							className="absolute left-full ml-3 px-2 py-1 text-xs font-medium rounded-md whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+							style={{
+								background: "rgba(22, 22, 29, 0.95)",
+								color: "var(--color-text-primary)",
+								border: "1px solid rgba(124,92,191,0.2)",
+							}}>
+							{label.replace("Go to ", "").replace(" section", "")}
+						</span>
+					</motion.button>
+				);
+			})}
+
+			{/* Active indicator line */}
+			<div
+				className="absolute right-1 top-3 bottom-3 w-[2px] rounded-full"
+				style={{ background: "rgba(124,92,191,0.15)" }}>
+				<motion.div
+					className="w-full rounded-full"
+					style={{
+						background: "linear-gradient(to bottom, #7c5cbf, #a07de0)",
+						height: `${100 / navItems.length}%`,
+					}}
+					animate={{
+						y: `${activeIndex * 100}%`,
+					}}
+					transition={{ type: "spring", stiffness: 200, damping: 25 }}
+				/>
+			</div>
+		</motion.div>
 	);
 };
 
