@@ -35,7 +35,7 @@ export default function Page() {
 		<>
 			<main className="overflow-hidden">
 				<FixedButon href="/#projects">
-					<FontAwesomeIcon icon={faChevronLeft} className="text-black pr-10" />
+					<FontAwesomeIcon icon={faChevronLeft} className="text-white pr-10" />
 				</FixedButon>
 				<div className="relative h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden">
 					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
@@ -54,14 +54,14 @@ export default function Page() {
 							/>
 						</motion.div>
 					</div>
-					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none md:backdrop-filter-none bg-gray-100 bg-opacity-50 md:bg-transparent md:pt-0">
-						<h1 className="md:bg-white bg-transparent lg:bg-transparent bg-opacity-50 md-px-0 text-black text-5xl md:text-8xl font-bold">
+					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none md:backdrop-filter-none bg-gray-800 bg-opacity-50 md:bg-transparent md:pt-0">
+						<h1 className="md:bg-[#1c1c26] bg-transparent lg:bg-transparent bg-opacity-50 md-px-0 text-white text-5xl md:text-8xl font-bold">
 							My Projects
 						</h1>
 						<Hr />
-						<p className="title  text-xl mt-4 tracking-wider text-gray-900 leading-[1.7rem] mb-5">
+						<p className="title  text-xl mt-4 tracking-wider text-white leading-[1.7rem] mb-5">
 							List of my projects that I have done and{" "}
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent md:bg-gray-800 bg-opacity-50 xl:bg-transparent">
 								{" "}
 								currently working on.
 							</span>
@@ -176,7 +176,7 @@ export default function Page() {
 						<h2 className="text-2xl font-bold tracking-wider mb-3">
 							Ciburial Eco-Digital Village
 						</h2>
-						<p className="text-gray-600 text-justify title text-lg">
+						<p className="text-gray-400 text-justify title text-lg">
 							Inovasi Desa Mandiri Berbasis Kearifan Lokal dan Teknologi Tepat Guna — Kp. Ciburial, Garut, Jawa Barat. Proyek ini hadir dengan semangat &quot;Merawat akar, menumbuhkan harapan&quot;, mengintegrasikan potensi lokal dan inovasi digital untuk membangun kampung mandiri yang berwawasan ekologis.
 						</p>
 						<div className="mt-3">
@@ -233,10 +233,10 @@ export default function Page() {
 					{Object.keys(category).map((key, index) => (
 						<button
 							key={index}
-							className={`px-2 md:px-4 py-2 rounded-lg cursor-pointer transition-all ease duration-300 focus:bg-gray-300 focus:text-black focus:ring focus:ring-slate-500 ${
+							className={`px-2 md:px-4 py-2 rounded-lg cursor-pointer transition-all ease duration-300 focus:bg-gray-300 focus:text-white focus:ring focus:ring-slate-500 ${
 								activeCategory === key
-									? "bg-gray-300 text-black hover:bg-gray-700 hover:text-white"
-									: "bg-gray-700 text-white hover:bg-gray-300 hover:text-black"
+									? "bg-gray-300 text-white hover:bg-gray-700 hover:text-white"
+									: "bg-gray-700 text-white hover:bg-gray-300 hover:text-white"
 							}`}
 							onClick={() => setActiveCategory(key)}>
 							{category[key]}
