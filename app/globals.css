@@ -19,9 +19,7 @@
 	--gradient-bg: linear-gradient(135deg, #0f0f13 0%, #16161d 50%, #1a1426 100%);
 }
 
-html {
-	font-size: clamp(13px, 0.89vw, 17px) !important;
-}
+
 
 body {
 	font-family: var(--font-poppins), sans-serif !important;
