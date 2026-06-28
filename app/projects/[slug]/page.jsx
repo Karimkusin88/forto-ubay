@@ -133,7 +133,7 @@ function Page(props) {
 				aria-label="Go back">
 				<FontAwesomeIcon
 					icon={faChevronLeft}
-					className="text-black pr-10"
+					className="text-white pr-10"
 				/>
 			</button>
 			<ScrollDownButton />
