@@ -97,7 +97,7 @@ const MyPage = () => {
 							Ubay Rahmat Hidayat
 						</motion.h3>
 						<motion.h1
-							className="text-black text-4xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold my-2 md:my-5"
+							className="text-white text-4xl md:text-6xl lg:text-6xl 2xl:text-8xl font-bold my-2 md:my-5"
 							initial={{ x: -100, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							transition={{
@@ -192,7 +192,7 @@ const MyPage = () => {
 					</div>
 					<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 						<motion.h1
-							className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+							className="bg-[#1c1c26] lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-white text-5xl md:text-8xl font-bold"
 							initial={{ x: -100, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							transition={{
@@ -260,7 +260,7 @@ const MyPage = () => {
 					</div>
 					<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 						<motion.h1
-							className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+							className="bg-[#1c1c26] lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-white text-5xl md:text-8xl font-bold"
 							initial={{ x: -100, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							transition={{
@@ -279,7 +279,7 @@ const MyPage = () => {
 								type: "spring",
 							}}>
 							Karya-karya pilihan yang telah saya bangun 
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent md:bg-gray-800 bg-opacity-50 xl:bg-transparent">
 								{" "}
 								baik di dunia digital maupun konstruksi nyata.
 							</span>
@@ -331,7 +331,7 @@ const MyPage = () => {
 					</div>
 					<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
 						<motion.h1
-							className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3"
+							className="bg-[#1c1c26] lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-white text-5xl md:text-8xl font-bold mb-3"
 							initial={{ x: -100, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							transition={{
@@ -350,7 +350,7 @@ const MyPage = () => {
 								type: "spring",
 							}}>
 							Jangan ragu untuk menghubungi saya untuk{" "}
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent md:bg-gray-800 bg-opacity-50 xl:bg-transparent">
 								bertanya atau sekadar menyapa.
 							</span>
 						</motion.p>
