@@ -177,7 +177,7 @@ function ExperienceCard({ experience, index, isEven }) {
 					{experience.skills.map((skill, idx) => (
 						<span
 							key={idx}
-							className="bg-gray-200/60 hover:bg-gray-700/60 border border-gray-600/40 text-white px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
+							className="bg-gray-800/60 hover:bg-gray-700/60 border border-gray-600/40 text-white px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
 							{skill}
 						</span>
 					))}
