@@ -113,30 +113,30 @@ export default function About() {
 					<h2 className="text-2xl font-bold tracking-wider mb-3">
 						Ubay Rahmat Hidayat
 					</h2>
-					<p className="text-gray-600 text-justify title text-lg leading-relaxed">
+					<p className="text-gray-300 text-justify title text-lg leading-relaxed">
 						Saya adalah seorang{" "}
-						<span className="text-black font-medium">
+						<span className="text-white font-medium">
 							Multidisciplinary Builder
 						</span>{" "}
 						yang menggabungkan keahlian fisik (hard-skills lapangan) dengan teknologi digital secara otodidak. Memulai karir di dunia konstruksi tepat setelah lulus Madrasah Aliyah pada 2015, saya tidak segan terjun langsung menangani proyek kelistrikan, *drywall*, dan pemeliharaan interior.
 						<br />
 						<br />
 						Jam terbang yang panjang membawa saya dipercaya terlibat dalam mega-proyek berskala nasional di bawah naungan BUMN seperti{" "}
-						<span className="text-black font-medium">
+						<span className="text-white font-medium">
 							PT Adhi Karya
 						</span>{" "}
 						dan{" "}
-						<span className="text-black font-medium">
+						<span className="text-white font-medium">
 							PT Waskita Karya
 						</span>
 						, serta PLTU Lombok. Kini, saya menuangkan pengalaman kepemimpinan lapangan tersebut dengan mendirikan bisnis kontraktor mandiri,{" "}
-						<span className="text-black font-medium">
+						<span className="text-white font-medium">
 							IYS Works
 						</span>.
 						<br />
 						<br />
 						Meski berakar di dunia konstruksi fisik, rasa ingin tahu yang tinggi mendorong saya belajar memprogram. Berbekal mental pekerja keras, saya berhasil merancang dan mendeploy berbagai Decentralized Apps (DApps), Staking Dashboards, hingga antarmuka DEX berbasis Web3. Bagi saya, baik menginstalasi kelistrikan rumit maupun menulis kode *React*, intinya tetap sama:{" "}
-						<span className="text-black font-medium">
+						<span className="text-white font-medium">
 							membangun pondasi yang kokoh dan memberikan solusi yang nyata.
 						</span>
 					</p>
